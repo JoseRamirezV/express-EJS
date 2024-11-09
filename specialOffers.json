@@ -1,0 +1,20 @@
+[
+   {
+      "name": "MSI Raider GE76",
+      "description": "Laptop para juegos: Intel Core i9-12900H, GeForce RTX 3060, pantalla FHD de 17.3\" 144Hz, DDR5 de 16 GB, SSD NVMe de 1 TB",
+      "image": "assets/specialOffers/offer1.webp",
+      "price": "1879.99"
+   },
+   {
+      "name": "Logitech inalámbricos G733 Lightspeed",
+      "description": "Diadema de suspensión, Lightsync RGB, tecnología de micrófono Blue VO!CE y controladores de audio PRO-G, color negro.",
+      "image": "assets/specialOffers/offer2.webp",
+      "price": "126.99"
+   },
+   {
+      "name": "MageGee MK-Box",
+      "description": "Teclado mecánico portátil 60% para juegos, retroiluminación LED, compacto, 68 teclas, mini teclado gamer USB con switch rojo.",
+      "image": "assets/specialOffers/offer3.webp",
+      "price": "29.99"
+   }
+]

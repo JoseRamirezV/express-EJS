@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link rel="stylesheet" href="styles/header.css" />
+      <link rel="stylesheet" href="styles/home.css" />
+      <link rel="stylesheet" href="styles/footer.css" />
+
+      <title><%= title %></title>
+   </head>
+   <body>
+      <%- include('../src/partials/header.ejs') %>
+
+      <main>
+         <section class="hero">
+            <div>
+               <span>
+                  <h2>asd</h2>
+                  <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Obcaecati tempore repellat quos recusandae ab officia
+                     libero magnam quisquam suscipit quia laudantium cum
+                     mollitia, dolorum consequuntur reprehenderit totam aut.
+                  </p>
+               </span>
+               <img src="assets/hero-img.webp" alt="Gamer PC" />
+            </div>
+         </section>
+         <section class="offers">
+            <%- include('../src/partials/dividerTitle.ejs', {title: 'Ofertas especiales'}) %> 
+            <%- include('../src/partials/productList.ejs', {specialOffers}) %>
+         </section>
+         <section id="us">
+            <%- include('../src/partials/dividerTitle.ejs', {title:'Nosotros'}) %>
+            <div class="about">
+               <div class="info">
+                  <p>
+                     En Tech World, somos una comunidad dedicada al mundo gamer
+                     y la tecnología. Ofrecemos productos novedosos y exclusivos
+                     para mejorar tu experiencia de juego. Ya seas un jugador
+                     casual o experto, aquí encontrarás todo lo necesario para
+                     estar al día y optimizar tu setup. ¡Únete a Tech World!
+                  </p>
+                  <span>
+                     <h3>Ubicados en</h3>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7961.4058374615415!2d-76.99731413493035!3d3.873750930271642!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1731035014394!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </span>
+               </div>
+               <div class="products">
+                  <img src="assets/aboutUs/img1.webp" alt="Audífonos" />
+                  <img src="assets/aboutUs/img2.webp" alt="Mouse" />
+                  <img src="assets/aboutUs/img3.webp" alt="Teclado" />
+                  <img src="assets/aboutUs/img4.webp" alt="Consola" />
+                  <img src="assets/aboutUs/img5.webp" alt="PC" />
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <%- include('../src/partials/footer.ejs') %>
+   </body>
+</html>

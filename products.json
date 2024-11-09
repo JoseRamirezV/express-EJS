@@ -1,0 +1,62 @@
+[
+   {
+      "name": "PlayStation 5",
+      "description": "Next-gen gaming console with lightning-fast load times and immersive graphics.",
+      "image": "https://example.com/ps5.jpg",
+      "price": "$499.99"
+   },
+   {
+      "name": "Xbox Series X",
+      "description": "Powerful gaming console with 4K gaming and a vast library of games.",
+      "image": "https://example.com/xboxseriesx.jpg",
+      "price": "$499.99"
+   },
+   {
+      "name": "Nintendo Switch",
+      "description": "Versatile gaming console that can be used as a handheld or docked for TV play.",
+      "image": "https://example.com/nintendoswitch.jpg",
+      "price": "$299.99"
+   },
+   {
+      "name": "Razer DeathAdder V2",
+      "description": "Ergonomic gaming mouse with customizable RGB lighting and high-precision sensor.",
+      "image": "https://example.com/deathaderv2.jpg",
+      "price": "$69.99"
+   },
+   {
+      "name": "Logitech G Pro X",
+      "description": "Professional-grade gaming headset with customizable sound profiles and a detachable microphone.",
+      "image": "https://example.com/gprox.jpg",
+      "price": "$129.99"
+   },
+   {
+      "name": "Corsair K95 RGB Platinum",
+      "description": "Mechanical gaming keyboard with customizable RGB lighting and programmable macro keys.",
+      "image": "https://example.com/k95platinum.jpg",
+      "price": "$199.99"
+   },
+   {
+      "name": "Alienware Aurora R10",
+      "description": "High-performance gaming PC with AMD Ryzen processor and NVIDIA GeForce RTX graphics.",
+      "image": "https://example.com/aurorar10.jpg",
+      "price": "$1,499.99"
+   },
+   {
+      "name": "Samsung Odyssey G7",
+      "description": "Curved gaming monitor with QHD resolution and a 240Hz refresh rate for smooth gameplay.",
+      "image": "https://example.com/odysseyg7.jpg",
+      "price": "$699.99"
+   },
+   {
+      "name": "Oculus Quest 2",
+      "description": "All-in-one VR headset with a vast library of games and experiences.",
+      "image": "https://example.com/quest2.jpg",
+      "price": "$299.99"
+   },
+   {
+      "name": "PlayStation Plus 12-Month Subscription",
+      "description": "Get access to online multiplayer, free monthly games, and exclusive discounts on the PlayStation Store.",
+      "image": "https://example.com/psplus.jpg",
+      "price": "$59.99"
+   }
+]

@@ -1,0 +1,47 @@
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   a svg{
+      width: 3rem;
+      aspect-ratio: 1;
+   }
+
+   ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+
+      a {
+         text-decoration: none;
+         color: black;
+         -webkit-transform: perspective(1px) translateZ(0);
+         transform: perspective(1px) translateZ(0);
+         box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+         position: relative;
+         overflow: hidden;
+
+         &:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background: black;
+            height: 2px;
+            -webkit-transition-property: right;
+            transition-property: right;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+         }
+
+         &:is(:hover, :focus, :active):before{
+            right: 0;
+         }
+      }
+   }
+}
