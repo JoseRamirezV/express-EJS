@@ -1,7 +1,89 @@
-footer {
+#contact {
    background-color: #020617;
    display: flex;
    justify-content: space-between;
-   margin-top: 2rem;
+   align-items: center;
    padding: 1rem 2rem;
+
+   div {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+
+      .logo svg {
+         width: 3rem;
+         aspect-ratio: 1;
+         fill: white;
+      }
+
+      ul {
+         display: flex;
+         gap: 1rem;
+
+         li a {
+            -webkit-transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            color: white;
+            font-size: large;
+            list-style: none;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+            transform: perspective(1px) translateZ(0);
+
+            &:before {
+               content: '';
+               position: absolute;
+               z-index: -1;
+               left: 0;
+               right: 100%;
+               bottom: 0;
+               background: white;
+               height: 2px;
+               -webkit-transition-property: right;
+               transition-property: right;
+               -webkit-transition-duration: 0.2s;
+               transition-duration: 0.2s;
+               -webkit-transition-timing-function: ease-out;
+               transition-timing-function: ease-out;
+            }
+
+            &:is(:hover, :focus, :active):before {
+               right: 0;
+            }
+         }
+      }
+   }
+
+   form label {
+      align-items: center;
+      border-radius: 1rem;
+      display: flex;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: large;
+      
+      input {
+         background-color: transparent;
+         font-size: medium;
+         transition: all 0.3s ease;
+         width: 0;
+
+         &:focus {
+            outline: none;
+         }
+      }
+
+      &:hover,
+      &:has(input:focus) {
+         color: #020617;
+         background-color: white;
+         gap: 1rem;
+
+         input {
+            width: 12rem;
+         }
+      }
+   }
 }

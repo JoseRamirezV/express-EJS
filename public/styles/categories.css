@@ -1,0 +1,40 @@
+@import 'base.css';
+
+body {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+}
+
+main {
+   display: flex;
+   gap: 4rem;
+   align-items: center;
+   height: 70%;
+   justify-content: center;
+
+   .category-card {
+      align-items: center;
+      border-radius: 2rem;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      overflow: clip;
+      padding: 3rem;
+      transition: transform .3s ease, box-shadow .3s ease;
+      text-decoration: none;
+      color: #020617;
+
+      img {
+         width: 8rem;
+         aspect-ratio: 4/3;
+         object-fit: cover;
+      }
+
+      &:hover {
+         transform: scale(1.05);
+         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 150px 0px;
+      }
+   }
+}

@@ -1,9 +1,10 @@
 nav {
-   display: flex;
    align-items: center;
+   display: flex;
    justify-content: space-between;
+   padding-inline: 2rem;
 
-   a svg{
+   a svg {
       width: 3rem;
       aspect-ratio: 1;
    }
@@ -39,8 +40,40 @@ nav {
             transition-timing-function: ease-out;
          }
 
-         &:is(:hover, :focus, :active):before{
+         &:is(:hover, :focus, :active):before {
             right: 0;
+         }
+      }
+
+      .categories {
+         position: relative;
+
+         ul {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: #4755693a 0px 8px 24px;
+            display: block;
+            position: absolute;
+            padding: .4rem 0;
+            right: 50%;
+            top: 100%;
+            transform-origin: top right;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            z-index: 10;
+            overflow: clip;
+
+            li {
+               padding: .3rem .8rem;
+               a{
+                  display: block;
+                  padding: 0.2rem .4rem;
+               }
+            }
+         }
+
+         &:hover ul {
+            transform: scale(1);
          }
       }
    }

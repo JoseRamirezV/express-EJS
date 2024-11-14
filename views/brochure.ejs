@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles/brochure.css" />
+
+      <title>Catalogo - <%= category %></title>
+   </head>
+   <body>
+      <%- include('../src/partials/header.ejs') %>
+      <main>
+         <%- include('../src/partials/dividerTitle.ejs', {title: category}) %>
+         <li class="card-container">
+            <% filteredProducts.forEach(({price, name, description, img}) => {
+            %>
+            <div class="card">
+               <header class="tumb">
+                  <img src="<%= img %>" />
+               </header>
+               <div class="details">
+                  <span class="catagory">
+                     <%= category %>
+                     <h3><%= name %></h3>
+                  </span>
+                  <p><%= description %></p>
+               </div>
+               <footer class="bottom-details">
+                  <span class="price"><%= price %></span>
+                  <a href="/product/<%= name %>">
+                     <p>Ver mas</p>
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                     >
+                        <path
+                           stroke-linecap="round"
+                           stroke-linejoin="round"
+                           d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                     </svg>
+                  </a>
+               </footer>
+            </div>
+            <% })%>
+         </li>
+      </main>
+      <%- include('../src/partials/footer.ejs') %>
+   </body>
+</html>

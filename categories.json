@@ -1,0 +1,17 @@
+[
+   {
+      "label": "Consolas",
+      "img": "assets/categories/consolas.webp",
+      "url": "/consoles"
+   },
+   {
+      "label": "Portátiles",
+      "img": "assets/categories/portatiles.webp",
+      "url": "/laptops"
+   },
+   {
+      "label": "Periféricos",
+      "img": "assets/categories/perifericos.webp",
+      "url": "/peripherals"
+   }
+]

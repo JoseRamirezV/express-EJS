@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/categories.css">
+
+   <title>Categorías</title>
+</head>
+<body>
+   <%- include('../src/partials/header.ejs') %>
+   <main>
+      <% categories.forEach(({label, img, url}) => { %>
+         <a href="<%= url %>" class="category-card">
+            <img src="<%= img %>" alt="<%= label %>-img">
+            <span><%= label %></span>
+         </a>
+      <% }); %>
+   </main>
+</body>
+</html>
