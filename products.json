@@ -1,5 +1,6 @@
 [
    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
       "name": "PlayStation 5",
       "description": "Next-gen gaming console with lightning-fast load times and immersive graphics.",
       "img": "assets/products/PS5.webp",
@@ -7,6 +8,7 @@
       "category": "console"
    },
    {
+      "id": "d7b5047d-3c66-412e-bf69-b2d08a1510e7",
       "name": "Xbox Series X",
       "description": "Powerful gaming console with 4K gaming and a vast library of games.",
       "img": "assets/products/XBOX_SX.webp",
@@ -14,6 +16,7 @@
       "category": "console"
    },
    {
+      "id": "53cddf21-702b-4f57-a892-e516d60d7c00",
       "name": "Nintendo Switch",
       "description": "Versatile gaming console that can be used as a handheld or docked for TV play.",
       "img": "assets/products/Switch_OLED_NE.webp",
@@ -21,6 +24,7 @@
       "category": "console"
    },
    {
+      "id": "f47cfc7a-75a2-4f68-9f3e-1ad35ae640e9",
       "name": "Razer DeathAdder V2",
       "description": "Ergonomic gaming mouse with customizable RGB lighting and high-precision sensor.",
       "img": "assets/products/Razer DeathAdder V2.webp",
@@ -28,6 +32,7 @@
       "category": "peripheral"
    },
    {
+      "id": "144d82bc-89cd-4b11-9f45-5d609ba54b4b",
       "name": "Logitech G Pro X",
       "description": "Professional-grade gaming headset with customizable sound profiles and a detachable microphone.",
       "img": "assets/products/Logitech G Pro X.webp",
@@ -35,6 +40,7 @@
       "category": "peripheral"
    },
    {
+      "id": "b5a07950-dfd3-4fa7-99da-b61c0c4d8aae",
       "name": "Corsair K95 RGB Platinum",
       "description": "Mechanical gaming keyboard with customizable RGB lighting and programmable macro keys.",
       "img": "assets/products/Corsair K95 RGB Platinum.webp",
@@ -42,6 +48,7 @@
       "category": "peripheral"
    },
    {
+      "id": "90522343-5f38-429e-8726-f2677c8bdcdd",
       "name": "ASUS - ROG Zephyrus G14 14",
       "description": "AMD Ryzen 9 - 16GB de memoria - NVIDIA GeForce RTX 2060 - SSD de 1TB - Moonlight White",
       "img": "assets/products/ASUS ROG Zephyrus.webp",
@@ -49,6 +56,7 @@
       "category": "laptop"
    },
    {
+      "id": "810d2b8a-840d-420e-87df-0748a2554829",
       "name": "Samsung Odyssey G7",
       "description": "Curved gaming monitor with QHD resolution and a 240Hz refresh rate for smooth gameplay.",
       "img": "assets/products/samsung_odyssey.webp",
@@ -56,6 +64,7 @@
       "category": "peripheral"
    },
    {
+      "id": "fdb38eb7-0a2d-43ec-957c-3d7e177e86d1",
       "name": "Oculus Quest 2",
       "description": "All-in-one VR headset with a vast library of games and experiences.",
       "img": "assets/products/Oculus Quest 2.webp",
@@ -63,6 +72,7 @@
       "category": "peripheral"
    },
    {
+      "id": "5e8d2430-8cb2-4943-ae98-b1d2310c0d19",
       "name": "Msi Ge76 Raider 2021 (1tb Ssd, 16gb Ram)",
       "description": "MSI Gaming Laptop GE76 Raider 2021 (1TB SSD, 16GB RAM) 17.3 inch FHD 144 Hz, Intel Core i7-1180H (11th Gen), NVIDIA GeForce RTX 3060.",
       "img": "assets/products/MSI GE76 Raider.webp",
@@ -70,6 +80,7 @@
       "category": "laptop"
    },
    {
+      "id": "683b92d7-95eb-4ef2-962d-b6db2a372d02",
       "name": "PlayStation Plus 12-Month Subscription",
       "description": "Get access to online multiplayer, free monthly games, and exclusive discounts on the PlayStation Store.",
       "img": "assets/products/Consola_ps5.webp",
