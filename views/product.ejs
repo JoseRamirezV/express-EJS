@@ -17,7 +17,7 @@
                <h1><%= name %></h1>
             </div>
             <p><%= description %></p>
-            <div class="options">
+            <div class="counter">
                <button id="plus" onclick="increaseBy(-1)">
                   <%- include('../src/icons/minus.ejs') %>
                </button>
@@ -28,10 +28,15 @@
             </div>
             <div>
                <span class="price"><%= price %></span>
-               <button class="buy-btn">
-                  Comprar
-                  <%- include('../src/icons/cart.ejs') %>
-               </button>
+               <div class="options">
+                  <button class="buy">
+                     Comprar
+                     <!-- <%- include('../src/icons/cart.ejs') %> -->
+                  </button>
+                  <button class="like" id="<%= id %>" onclick="like(this.id)">
+                     <%- include('../src/icons/heart.ejs') %>
+                  </button>
+               </div>
             </div>
          </div>
       </main>
@@ -39,12 +44,60 @@
    </body>
 
    <script>
-      const counter = document.querySelector('.options span')
-      const plusBtn = document.getElementById('plus')
-      const minusBtn = document.getElementById('minus')
+      const counter = document.querySelector('.counter span');
+      const plusBtn = document.getElementById('plus');
+      const minusBtn = document.getElementById('minus');
 
-      function increaseBy (value) {
-         counter.innerHTML = Math.max(1, Math.min(Number(counter.innerHTML) + value, 10))
+      const productId = '<%= id %>';
+      const isFavorite = document.getElementById(productId);
+
+      function increaseBy(value) {
+         counter.innerHTML = Math.max(
+            1,
+            Math.min(Number(counter.innerHTML) + value, 10)
+         );
+      }
+
+      function getFavorites() {
+         return JSON.parse(window.localStorage.getItem('favorites')) ?? [];
+      }
+
+      const likedProducts = getFavorites();
+
+      if (likedProducts.find((p) => p.id === productId))
+         isFavorite.classList.add('liked');
+
+      function like(id) {
+         const product = {
+            id: productId,
+            name: '<%= name %>',
+            img: '<%= img %>',
+         };
+
+         const likedProducts = getFavorites();
+
+         if (!isFavorite.classList.contains('liked')) {
+            window.localStorage.setItem(
+               'favorites',
+               JSON.stringify([...likedProducts, product])
+            );
+
+            renderFavorites([...likedProducts, product]);
+
+            if (likedProducts.length === 0)
+               document.querySelector('.favorites svg').style.width = '1.2rem';
+         } else {
+            const idIndex = likedProducts.findIndex((p) => p.id === product.id);
+            likedProducts.splice(idIndex, 1);
+            window.localStorage.setItem(
+               'favorites',
+               JSON.stringify(likedProducts)
+            );
+            renderFavorites(likedProducts);
+            if (likedProducts.length === 0)
+               document.querySelector('.favorites svg').style.width = 0;
+         }
+         isFavorite.classList.toggle('liked');
       }
    </script>
 </html>

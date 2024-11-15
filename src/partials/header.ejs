@@ -3,20 +3,22 @@
       <%- include('./logo.ejs') %>
       <ul>
          <li class="categories">
-            <svg
-               xmlns="http://www.w3.org/2000/svg"
-               fill="none"
-               viewBox="0 0 24 24"
-               stroke-width="1.5"
-               stroke="currentColor"
-               class="size-6"
-            >
-               <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-               />
-            </svg>
+            <button>
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+               >
+                  <path
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+               </svg>
+            </button>
 
             <a href="/categories">Catalogo</a>
             <ul>
@@ -27,6 +29,44 @@
          </li>
          <li><a href="#us">Nosotros</a></li>
          <li><a href="#contact">Contáctenos</a></li>
+         <li class="favorites">
+            <button><%- include('../icons/heart.ejs') %></button>
+            <ul class="list"></ul>
+         </li>
       </ul>
    </nav>
+   <script>
+      const favoritesBtn = document.querySelector('.favorites svg');
+      const likedList = document.querySelector('.favorites .list');
+
+      favoritesBtn.style.width = 0;
+
+      function checkFavoritesList() {
+         const favorites =
+            JSON.parse(window.localStorage.getItem('favorites')) ?? [];
+
+         if (favorites.length > 0) {
+            favoritesBtn.style.width = '1.2rem';
+
+            renderFavorites(favorites);
+         }
+      }
+
+      function renderFavorites(favorites) {
+         likedList.innerHTML = '';
+
+         favorites.forEach(({ id, name, img }) => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+               <a href="/product/${id}">
+                  <img src="/${img}" alt="${name}" />
+                  <p>${name}</p>
+               </a>
+            `;
+            likedList.appendChild(li);
+         });
+      }
+
+      checkFavoritesList();
+   </script>
 </header>

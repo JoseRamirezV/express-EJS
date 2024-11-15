@@ -16,7 +16,7 @@ main {
    .category-card {
       align-items: center;
       border-radius: 2rem;
-      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 60px 0px;
       cursor: pointer;
       display: flex;
       flex-direction: column;
@@ -34,7 +34,7 @@ main {
 
       &:hover {
          transform: scale(1.05);
-         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 150px 0px;
+         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       }
    }
 }
