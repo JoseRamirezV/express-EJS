@@ -89,6 +89,7 @@ nav {
             box-shadow: #4755693a 0px 8px 24px;
             display: flex;
             flex-direction: column;
+            gap: 0;
             overflow: clip;
             padding: 0.4rem 0;
             position: absolute;
@@ -105,6 +106,7 @@ nav {
                   display: flex;
                   gap: 0.5rem;
                   padding: 0.2rem 0.4rem;
+                  align-items: center;
 
                   img {
                      width: 2rem;
@@ -117,7 +119,7 @@ nav {
                      overflow-x: clip;
                      text-overflow: ellipsis;
                      white-space: nowrap;
-                     margin: auto;
+                     
                   }
                }
             }
