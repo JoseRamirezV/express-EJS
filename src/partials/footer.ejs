@@ -1,5 +1,4 @@
 <footer id="contact">
-   <!-- <p>&copy; PIK</p> -->
    <div>
       <%- include('./logo.ejs') %>
       <ul>
@@ -8,10 +7,25 @@
          <li><a href="#contact">Contáctenos</a></li>
       </ul>
    </div>
-   <form>
+   <form id="letsTalk">
       <label>
          Hablemos!
-         <input type="email" name="email" placeholder="example@gmail.com" autocomplete="off">
+         <input
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+            autocomplete="off"
+         />
       </label>
    </form>
+   <script>
+      const form = document.querySelector('#letsTalk');
+
+      form.addEventListener('submit', (e) => {
+         e.preventDefault();
+         const { email } = Object.fromEntries(new window.FormData(form));
+         alert(`Algo haría con este email "${email}", pero no hoy :)`);
+         form.reset()
+      });
+   </script>
 </footer>
